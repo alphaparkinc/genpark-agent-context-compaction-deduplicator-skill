@@ -1,0 +1,37 @@
+{
+  "name": "genpark-agent-context-compaction-deduplicator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Long-horizon context window compression and semantic deduplicator eliminating redundant tool outputs and recovering token capacity.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "agentic-infrastructure",
+  "tags": [
+    "context-compaction",
+    "token-deduplication",
+    "long-horizon-agent",
+    "prompt-optimization",
+    "token-recovery"
+  ],
+  "inputs": {
+    "max_token_budget": {
+      "type": "integer",
+      "default": 16000
+    }
+  },
+  "outputs": {
+    "compaction_id": {
+      "type": "string"
+    },
+    "original_token_count": {
+      "type": "integer"
+    },
+    "post_compression_tokens": {
+      "type": "integer"
+    },
+    "effective_compression_ratio": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
